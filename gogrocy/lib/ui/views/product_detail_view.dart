@@ -1,4 +1,4 @@
-import 'package:flushbar/flushbar.dart';
+//import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:gogrocy/core/viewModels/product_detail_model.dart';
 import 'package:gogrocy/ui/shared/constants.dart' as constants;
@@ -12,14 +12,14 @@ import 'package:gogrocy/core/models/ProductsByCity.dart';
 class ProductDetailView extends StatelessWidget {
   final Result product;
 
-  Flushbar successSnackbar = infoSnackBar(
-      message: "Added to cart",
-      iconData: Icons.check,
-      iconColor: colors.primaryColor);
-  Flushbar failureSnackbar = infoSnackBar(
-      message: "Could not add to cart",
-      iconData: Icons.error,
-      iconColor: Colors.red);
+  // Flushbar successSnackbar = infoSnackBar(
+  //     message: "Added to cart",
+  //     iconData: Icons.check,
+  //     iconColor: colors.primaryColor);
+  // Flushbar failureSnackbar = infoSnackBar(
+  //     message: "Could not add to cart",
+  //     iconData: Icons.error,
+  //     iconColor: Colors.red);
 
   ProductDetailView(this.product);
 
@@ -150,9 +150,9 @@ class ProductDetailView extends StatelessWidget {
                     onPressed: () async {
                       var success = await model.addToCart(product.id);
                       if (success) {
-                        successSnackbar.show(context);
+                        //successSnackbar.show(context);
                       } else {
-                        failureSnackbar.show(context);
+                        //failureSnackbar.show(context);
                       }
                     },
                   ),

@@ -9,6 +9,7 @@ class NavigationService {
   }
 
   bool goBack() {
-    return navigatorKey.currentState.pop();
+     navigatorKey.currentState.pop();
+     return false;
   }
 }

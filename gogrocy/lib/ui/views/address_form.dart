@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:flushbar/flushbar.dart';
+//import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:gogrocy/core/services/api.dart';
 import 'package:gogrocy/core/services/shared_prefs.dart';
@@ -185,17 +185,17 @@ class _AddressFormState extends State<AddressForm> {
                         var result = await model.addAddress();
                         if (result) {
                           Navigator.of(context).pop();
-                          Flushbar(
-                            message: "Address added successfully.",
-                            duration: Duration(seconds: 1),
-                          ).show(context);
-                        } else
-                          Flushbar(
-                            message:
-                                "Error adding address. Please try again later.",
-                            duration: Duration(seconds: 3),
-                          ).show(context);
-                      }
+                          // Flushbar(
+                          //   message: "Address added successfully.",
+                          //   duration: Duration(seconds: 1),
+                          // ).show(context);
+                        } //else
+                          // Flushbar(
+                          //   message:
+                          //       "Error adding address. Please try again later.",
+                          //   duration: Duration(seconds: 3),
+                          // ).show(context);
+                     }
                     },
                   ),
                 ),

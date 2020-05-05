@@ -1,4 +1,4 @@
-import 'package:flushbar/flushbar.dart';
+//import 'package:flushbar/flushbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -308,10 +308,10 @@ class _LoginTextFieldWidgetState extends State<LoginTextFieldWidget> {
                             SystemChannels.textInput
                                 .invokeMethod('TextInput.hide');
                           } else {
-                            Flushbar(
-                              message: 'OTP must be 6 digits',
-                              duration: Duration(seconds: 2),
-                            ).show(context);
+                            // Flushbar(
+                            //   message: 'OTP must be 6 digits',
+                            //   duration: Duration(seconds: 2),
+                            // ).show(context);
                           }
                           //Navigator.of(context).pushNamed('awesome');
                         },

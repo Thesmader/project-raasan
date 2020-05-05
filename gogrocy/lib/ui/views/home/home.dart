@@ -17,6 +17,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //print(CircularNotchedRectangle().getOuterPath.toString());
     return Scaffold(
       body: ListView(
         children: <Widget>[

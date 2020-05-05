@@ -1,4 +1,4 @@
-import 'package:flushbar/flushbar.dart';
+//import 'package:flushbar/flushbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gogrocy/core/models/address.dart';
@@ -215,57 +215,57 @@ class _CartFooterState extends State<CartFooter> {
       onPressed: () async {
         bool orderStatus = await apis.placeOrder(addressId: addressId);
         if (orderStatus) {
-          Flushbar(
-            messageText: Text(
-              "Order placed successfully!",
-              style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
-            ),
-            duration: Duration(seconds: 2),
-            flushbarStyle: FlushbarStyle.FLOATING,
-            icon: Icon(
-              Icons.check,
-              color: colors.primaryColor,
-            ),
-            barBlur: 0.9,
-            margin: EdgeInsets.all(8.0),
-            borderRadius: 8.0,
-            backgroundColor: Colors.white,
-            boxShadows: [
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(0.0, 0.0),
-                blurRadius: 5.0,
-              )
-            ],
-          )..show(context);
+          // Flushbar(
+          //   messageText: Text(
+          //     "Order placed successfully!",
+          //     style:
+          //         TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
+          //   ),
+          //   duration: Duration(seconds: 2),
+          //   flushbarStyle: FlushbarStyle.FLOATING,
+          //   icon: Icon(
+          //     Icons.check,
+          //     color: colors.primaryColor,
+          //   ),
+          //   barBlur: 0.9,
+          //   margin: EdgeInsets.all(8.0),
+          //   borderRadius: 8.0,
+          //   backgroundColor: Colors.white,
+          //   boxShadows: [
+          //     BoxShadow(
+          //       color: Colors.grey,
+          //       offset: Offset(0.0, 0.0),
+          //       blurRadius: 5.0,
+          //     )
+          //   ],
+          // )..show(context);
           _navigationService.navigateTo('orders');
           widget.model.getCartList(productId: null, quantity: null);
         } else
-          Flushbar(
-            messageText: Text(
-              "Error while placing order",
-              style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
-            ),
-            duration: Duration(seconds: 2),
-            flushbarStyle: FlushbarStyle.FLOATING,
-            icon: Icon(
-              Icons.error,
-              color: Colors.red,
-            ),
-            barBlur: 0.9,
-            margin: EdgeInsets.all(8.0),
-            borderRadius: 8.0,
-            backgroundColor: Colors.white,
-            boxShadows: [
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(0.0, 0.0),
-                blurRadius: 5.0,
-              )
-            ],
-          )..show(context);
+          // Flushbar(
+          //   messageText: Text(
+          //     "Error while placing order",
+          //     style:
+          //         TextStyle(color: Colors.black, fontWeight: FontWeight.w500),
+          //   ),
+          //   duration: Duration(seconds: 2),
+          //   flushbarStyle: FlushbarStyle.FLOATING,
+          //   icon: Icon(
+          //     Icons.error,
+          //     color: Colors.red,
+          //   ),
+          //   barBlur: 0.9,
+          //   margin: EdgeInsets.all(8.0),
+          //   borderRadius: 8.0,
+          //   backgroundColor: Colors.white,
+          //   boxShadows: [
+          //     BoxShadow(
+          //       color: Colors.grey,
+          //       offset: Offset(0.0, 0.0),
+          //       blurRadius: 5.0,
+          //     )
+          //   ],
+          // )..show(context);
         print("Order Placed");
       },
       child: Text("Place Order",

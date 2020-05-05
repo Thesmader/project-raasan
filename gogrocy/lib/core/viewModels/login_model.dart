@@ -111,8 +111,8 @@ class LoginModel extends BaseModel {
     if (user.success) {
       _sharedPrefsService.setJWT(user.jwt);
       print('Login With Password successful');
-      FireStoreService.addUser(
-          phoneNumber: phoneNumber, countryCode: countryCode);
+//      FireStoreService.addUser(
+//          phoneNumber: phoneNumber, countryCode: countryCode);
       print(_sharedPrefsService.setLoggedIn(true));
       if (citySelected) {
         navigationService.goBack();

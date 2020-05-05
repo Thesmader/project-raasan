@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+//import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,11 +13,9 @@ import 'package:gogrocy/ui/views/startup_view.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:gogrocy/ui/shared/constants.dart' as constants;
-import 'package:firebase_messaging/firebase_messaging.dart';
-
 void main() {
 //  Crashlytics.instance.enableInDevMode = true;
-  FlutterError.onError = Crashlytics.instance.recordFlutterError;
+  //FlutterError.onError = Crashlytics.instance.recordFlutterError;
   setupLocator();
   runApp(GoGrocyApp());
 }
@@ -34,25 +32,25 @@ class _GoGrocyAppState extends State<GoGrocyApp> {
   @override
   void initState() {
     super.initState();
-    try {
-      versionCheck(context);
-    } catch (e) {
-      print(e);
-    }
-    SystemChrome.setEnabledSystemUIOverlays(
-        [SystemUiOverlay.bottom, SystemUiOverlay.top]);
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    // try {
+    //   versionCheck(context);
+    // } catch (e) {
+    //   print(e);
+    // }
+    // SystemChrome.setEnabledSystemUIOverlays(
+    //     [SystemUiOverlay.bottom, SystemUiOverlay.top]);
+    // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   }
 
   @override
   void dispose() {
     super.dispose();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
+    // SystemChrome.setPreferredOrientations([
+    //   DeviceOrientation.landscapeRight,
+    //   DeviceOrientation.landscapeLeft,
+    //   DeviceOrientation.portraitUp,
+    //   DeviceOrientation.portraitDown,
+    // ]);
   }
 
   @override

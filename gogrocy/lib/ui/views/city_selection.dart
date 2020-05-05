@@ -1,4 +1,4 @@
-import 'package:flushbar/flushbar.dart';
+//import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:gogrocy/core/services/navigation_service.dart';
 import 'package:gogrocy/core/services/shared_prefs.dart';
@@ -66,31 +66,31 @@ class CitySelectionView extends StatelessWidget {
                   ),
                   onPressed: () async {
                     if (model.selectedCityTile == 0) {
-                      Flushbar(
-                        messageText: Text(
-                          "Select a city",
-                          style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.w500),
-                        ),
-                        flushbarStyle: FlushbarStyle.FLOATING,
-                        duration: Duration(seconds: 2),
-                        icon: Icon(
-                          Icons.error_outline,
-                          color: Colors.red,
-                        ),
-                        shouldIconPulse: false,
-                        barBlur: 0.9,
-                        margin: EdgeInsets.all(8.0),
-                        borderRadius: 8.0,
-                        backgroundColor: Colors.white,
-                        boxShadows: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            offset: Offset(0.0, 0.0),
-                            blurRadius: 5.0,
-                          )
-                        ],
-                      ).show(context);
+                      // Flushbar(
+                      //   messageText: Text(
+                      //     "Select a city",
+                      //     style: TextStyle(
+                      //         color: Colors.black, fontWeight: FontWeight.w500),
+                      //   ),
+                      //   flushbarStyle: FlushbarStyle.FLOATING,
+                      //   duration: Duration(seconds: 2),
+                      //   icon: Icon(
+                      //     Icons.error_outline,
+                      //     color: Colors.red,
+                      //   ),
+                      //   shouldIconPulse: false,
+                      //   barBlur: 0.9,
+                      //   margin: EdgeInsets.all(8.0),
+                      //   borderRadius: 8.0,
+                      //   backgroundColor: Colors.white,
+                      //   boxShadows: [
+                      //     BoxShadow(
+                      //       color: Colors.grey,
+                      //       offset: Offset(0.0, 0.0),
+                      //       blurRadius: 5.0,
+                      //     )
+                      //   ],
+                      // ).show(context);
                     } else {
                       String city =
                           model.selectedCityTile == 1 ? "Jeypore" : "Sunabeda";

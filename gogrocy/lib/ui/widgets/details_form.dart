@@ -228,9 +228,9 @@ class _DetailsFormState extends State<DetailsForm> {
                             if (model.detailsFormKey.currentState.validate()) {
                               var result = await model.signUpWithApi();
                               if (result) {
-                                FireStoreService.addUser(
-                                    phoneNumber: widget.mobile,
-                                    countryCode: widget.countryCode);
+//                                FireStoreService.addUser(
+//                                    phoneNumber: widget.mobile,
+//                                    countryCode: widget.countryCode);
                               }
                             }
                           },
